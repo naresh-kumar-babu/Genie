@@ -1,0 +1,7 @@
+vir
+pyvenv.cfg
+__pycache__/
+migrations/
+lib/
+bin/
+media/
