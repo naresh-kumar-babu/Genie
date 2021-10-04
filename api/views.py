@@ -4,7 +4,9 @@ from api.model.neural_net import predict
 from django.views.decorators.csrf import csrf_exempt
 from PIL import Image
 from django.core.files.base import ContentFile
+from django.views.decorators.clickjacking import xframe_options_exempt
 
+@xframe_options_exempt
 @csrf_exempt
 def home(request):
     result = {}
