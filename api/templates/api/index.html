@@ -10,20 +10,11 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     
 </head>
+<center>
 <body bgcolor="#1c1c1f">
     <div>
-    <center>
-        <h1>Genie</h1>
-
+        <h1><b>Genie</b></h1>
         <br>
-        {% if stat %}
-          <h3>Reality confidence</h3><br>
-          </center>
-          <div class="w3-dark-grey w3-round" style="width:250px; align-content: left; background: grey;">
-            <div class="w3-container w3-round w3-blue" style="width:{{result}}%;padding: 10px; font-weight: bold;">{{result}}%</div>
-          </div>
-        {% else %}
-        <center>
           <form id = "form_element" enctype="multipart/form-data" method="post">    
             <div class="drop-zone">
               <span class="drop-zone__prompt">Drop file here or click to upload</span>
@@ -32,12 +23,18 @@
             <br>
             <button type="submit" class="submit" id="submit">SUBMIT</button>
           </form>
-        {% endif %}
-  <br>
-  <br>
-</div></center>
+        {% if stat %}
+          <br>
+          <h3>Reality confidence</h3><br>
+          
+          <div align="left" class="w3-dark-grey w3-round" style="width:100%; align-content: left; background: grey;">
+            <div align="left" class="w3-container w3-round w3-blue" style="width:{{result}}%;padding: 10px; font-weight: bold;">{{result}}%</div>
+          </div>
+        {% endif %}<br><br>
+    </div>
 <script src="{% static 'dropzone.js' %}"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 
 </body>
+</center>
 </html>
