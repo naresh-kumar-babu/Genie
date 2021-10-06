@@ -24,6 +24,7 @@ def home(request):
   # return render(request, 'api/index.html', {'stat': False})
     """
     img_url = request.POST.get('url_input')
+    print(img_url)
     if img_url == '':
       result = {'error':'Image not provided'}
     else:
