@@ -32,4 +32,4 @@ def home(request):
       im = im.convert('RGB')
       result = predict(im)
   print(result)
-  return HttpResponse(str(result),content_type='text/json')
+  return HttpResponse(result, content_type='application/json')
