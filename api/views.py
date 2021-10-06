@@ -27,7 +27,7 @@ def home(request):
     if img_url == '':
       result = {'error':'Image not provided'}
     else:
-      im = Image.open(requests.get(url_input, stream=True).raw)
+      im = Image.open(requests.get(img_url, stream=True).raw)
       im = im.convert('RGB')
       result = predict(im)
   print(result)
