@@ -30,6 +30,6 @@ def home(request):
     else:
       im = Image.open(requests.get(img_url, stream=True).raw)
       im = im.convert('RGB')
-      result = predict(im)
+      result['confidence'] = predict(im)
   print(result)
   return HttpResponse(result, content_type='application/json')
